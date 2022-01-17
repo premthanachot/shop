@@ -1,64 +1,48 @@
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/img/promote0.png" class="d-block w-100" alt="shoptest">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/img/promote0.png" class="d-block w-100" alt="shoptest">
+      </div>
+      <div class="carousel-item">
+        <img src="/img/promote1.png" class="d-block w-100" alt="shoptest">
+      </div>
+      <div class="carousel-item">
+        <img src="/img/promote2.png" class="d-block w-100" alt="shoptest">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="/img/promote1.png" class="d-block w-100" alt="shoptest">
-    </div>
-    <div class="carousel-item">
-      <img src="/img/promote2.png" class="d-block w-100" alt="shoptest">
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-<!-- category -->
+  <!-- category -->
 <section class="pb-4 pt-4">
   <h2>หมวดหมู่</h2>
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-gl-3">
-    <a href="#" class="col text-center category__link">
-      <div class="category__img shadow">
-        <img src="img/product0.png" alt="Burgers" loading="lazy">
-      </div>
-      <div class="pt-1">Burgers</div>
-    </a>
-
-    <a href="#" class="col text-center category__link">
-      <div class="category__img shadow">
-        <img src="img/product0.png" alt="Burgers" loading="lazy">
-      </div>
-      <div class="pt-1">Pizza</div>
-    </a>
-
-    <a href="#" class="col text-center category__link">
-      <div class="category__img shadow">
-        <img src="img/product0.png" alt="Burgers" loading="lazy">
-      </div>
-      <div class="pt-1">Appetizers</div>
-    </a>
-
-    <a href="#" class="col text-center category__link">
-      <div class="category__img shadow">
-        <img src="img/product0.png" alt="Burgers" loading="lazy">
-      </div>
-      <div class="pt-1">Drinks</div>
-    </a>
-
-    <a href="#" class="col text-center category__link">
-      <div class="category__img shadow">
-        <img src="img/product0.png" alt="Burgers" loading="lazy">
-      </div>
-      <div class="pt-1">Sweet</div>
-    </a>
-
+    <% if(categories !='' ) { %>
+      <% categories.forEach(function(category, index) { %>
+        <a href="#" class="col text-center category__link">
+          <div class="category__img shadow">
+            <img src="img/<%- category.image %>" alt="<%- category.name %>" loading="lazy">
+          </div>
+          <div class="pt-1"><%- category.name %></div>
+        </a>
+        <% }) %>
+          <% } %>
   </div>
 </section>
 
@@ -72,30 +56,30 @@
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
     <a href="/recipe/#" class="col text-conter category__link">
       <div class="category__img category__img--large shadow">
-        <img src="img/product0.png" alt="shoptest" loading="lazy">
+        <img src="img/pork burger.png" alt="shoptest" loading="lazy">
       </div>
-      <div class="pt-1">something</div>
+      <div class="pt-1">Pork Burger</div>
     </a>
 
     <a href="/recipe/#" class="col text-conter category__link">
       <div class="category__img category__img--large shadow">
-        <img src="img/product0.png" alt="shoptest" loading="lazy">
+        <img src="img/doublebeefbur.png" alt="shoptest" loading="lazy">
       </div>
-      <div class="pt-1">something</div>
+      <div class="pt-1">Double Beef Burger</div>
     </a>
 
     <a href="/recipe/#" class="col text-conter category__link">
       <div class="category__img category__img--large shadow">
-        <img src="img/product0.png" alt="shoptest" loading="lazy">
+        <img src="img/margherrita.png" alt="shoptest" loading="lazy">
       </div>
-      <div class="pt-1">something</div>
+      <div class="pt-1">Margherrita Pizza</div>
     </a>
 
     <a href="/recipe/#" class="col text-conter category__link">
       <div class="category__img category__img--large shadow">
-        <img src="img/product0.png" alt="shoptest" loading="lazy">
+        <img src="img/coldchocolate.png" alt="shoptest" loading="lazy">
       </div>
-      <div class="pt-1">something</div>
+      <div class="pt-1">Cold Chocolate</div>
     </a>
   </div>
 </section>
@@ -105,9 +89,12 @@
 </section>
 
 <section class="px-4 py-5 my-5 text-center">
-  <img src="/img/botton.png" class="d-block mx-auto mb-4 img-fluid" alt="Pubilsh your recipe for FREE today" width="566" height="288" loading="lazy">
+  <img src="/img/botton.png" class="d-block mx-auto mb-4 img-fluid" alt="Pubilsh your recipe for FREE today" width="566"
+    height="288" loading="lazy">
   <h1 class="display-5 fw-bold">Pubilsh your recipe for FREE today</h1>
   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
     <a href="/submit-recipe" class="btn btn-primary btn-dark btn-lg">submit recipe</a>
   </div>
 </section>
+</body>
+</html>
